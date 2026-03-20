@@ -30,31 +30,31 @@
             text-align: center;
             color: #0b3d91;
         }
-        .posts {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-        }
         .post {
-            background: white;
-            width: 300px;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        .post h3 {
-            margin-top: 0;
-        }
+    background: white;
+    width: 300px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    transition: 0.3s;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
         .btn {
-            display: inline-block;
-            margin-top: 10px;
-            background: #0b3d91;
-            color: white;
-            padding: 6px 12px;
-            border-radius: 5px;
-            text-decoration: none;
-        }
+    display: inline-block;
+    margin-top: auto;
+    background: #0b3d91;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+        
+        .posts {
+    align-items: stretch;
+}
 
         .container {
     width: 100%;
