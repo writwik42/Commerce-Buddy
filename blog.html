@@ -55,6 +55,51 @@
             border-radius: 5px;
             text-decoration: none;
         }
+
+        .container {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+        /* Mobile Responsive Fix */
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 8px 10px 0 0;
+    }
+
+    .hero {
+        padding: 60px 15px;
+    }
+
+    .hero h2 {
+        font-size: 26px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+}
+        
     </style>
 </head>
 <body>
