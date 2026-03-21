@@ -1,0 +1,118 @@
+/* mcq-styles.css */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+header {
+  background: #264653;
+  color: #fff;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+}
+header .logo {
+  font-size: 1.2em;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+nav li {
+  margin-left: 20px;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+main {
+  padding: 20px;
+}
+h1 {
+  text-align: center;
+  color: #264653;
+}
+.filters {
+  text-align: center;
+  margin: 20px 0;
+}
+.filters label {
+  margin: 0 10px;
+  font-weight: bold;
+}
+.filters select {
+  margin: 0 10px;
+  padding: 5px;
+}
+.download-btn {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 8px 15px;
+  background: #e76f51;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+}
+.subject-section {
+  margin-bottom: 40px;
+}
+.subject-section h2 {
+  color: #2a9d8f;
+  border-bottom: 2px solid #2a9d8f;
+  padding-bottom: 5px;
+}
+.topic {
+  margin: 20px 0;
+}
+.topic h3 {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  color: #264653;
+}
+.topic ul {
+  list-style: none;
+  padding: 0;
+}
+.topic li {
+  margin: 10px 0;
+}
+topic details summary {
+  cursor: pointer;
+}
+details summary {
+  padding: 10px;
+  background: #e9c46a;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-weight: bold;
+}
+details p {
+  margin: 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  background: #f9f9f9;
+}
+footer {
+  background: #264653;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  .filters label, .filters select, .download-btn {
+    display: block;
+    margin: 10px auto;
+  }
+}
