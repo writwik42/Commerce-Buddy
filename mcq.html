@@ -1,0 +1,135 @@
+<!-- mcq.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MCQ Practice – CommerceBuddy</title>
+  <meta name="description" content="Practice multiple-choice questions by subject and board. Instant answer reveal for commerce subjects (WBCHSE/CBSE/ICSE).">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="mcq-styles.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="logo"><strong>CommerceBuddy</strong></div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Class 11</a></li>
+        <li><a href="#">Class 12</a></li>
+        <li><a href="#">Key Topics</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">MCQ Practice</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>MCQ Practice</h1>
+    <div class="filters">
+      <label for="subject-select">Subject:</label>
+      <select id="subject-select">
+        <option value="all">All</option>
+        <option value="accountancy">Accountancy</option>
+        <option value="business">Business Studies</option>
+        <option value="economics">Economics</option>
+      </select>
+      <label for="board-select">Board:</label>
+      <select id="board-select">
+        <option value="all">All</option>
+        <option value="WBCHSE">WBCHSE</option>
+        <option value="CBSE">CBSE</option>
+        <option value="ICSE">ICSE</option>
+      </select>
+      <a href="#" class="download-btn">Download Answers (PDF)</a>
+    </div>
+
+    <section class="subject-section">
+      <h2>Accountancy</h2>
+      <div class="topic">
+        <h3>Fundamentals of Accounting (Semester 1)</h3>
+        <ul>
+          <li data-board="WBCHSE,CBSE,ICSE">
+            <details>
+              <summary>Which financial statement shows a company’s financial position at a given date?</summary>
+              <p>Answer: The Balance Sheet.</p>
+            </details>
+          </li>
+          <li data-board="WBCHSE,CBSE,ICSE">
+            <details>
+              <summary>What is the accounting equation?</summary>
+              <p>Answer: Assets = Liabilities + Equity.</p>
+            </details>
+          </li>
+        </ul>
+      </div>
+      <div class="topic">
+        <h3>Accounting Standards (Semester 2)</h3>
+        <ul>
+          <li data-board="WBCHSE,CBSE">
+            <details>
+              <summary>Which global framework applies to multinational companies?</summary>
+              <p>Answer: IFRS (International Financial Reporting Standards).</p>
+            </details>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="subject-section">
+      <h2>Business Studies</h2>
+      <div class="topic">
+        <h3>Business Environment (Semester 1)</h3>
+        <ul>
+          <li data-board="WBCHSE,ICSE">
+            <details>
+              <summary>What is meant by 'Globalization' in business?</summary>
+              <p>Answer: The increasing integration and interdependence of national economies.</p>
+            </details>
+          </li>
+        </ul>
+      </div>
+      <div class="topic">
+        <h3>Business Finance (Semester 2)</h3>
+        <ul>
+          <li data-board="CBSE,ICSE">
+            <details>
+              <summary>What is the capital structure of a company?</summary>
+              <p>Answer: The mix of debt and equity financing used by a firm.</p>
+            </details>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="subject-section">
+      <h2>Economics</h2>
+      <div class="topic">
+        <h3>Microeconomics (Semester 1)</h3>
+        <ul>
+          <li data-board="WBCHSE,CBSE,ICSE">
+            <details>
+              <summary>What is the law of demand?</summary>
+              <p>Answer: As price decreases, quantity demanded increases (ceteris paribus).</p>
+            </details>
+          </li>
+        </ul>
+      </div>
+      <div class="topic">
+        <h3>Macroeconomics (Semester 2)</h3>
+        <ul>
+          <li data-board="WBCHSE,CBSE">
+            <details>
+              <summary>What does GDP stand for?</summary>
+              <p>Answer: Gross Domestic Product.</p>
+            </details>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Commerce Buddy. All rights reserved.</p>
+  </footer>
+</body>
+</html>
