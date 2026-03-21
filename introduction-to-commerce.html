@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="google-site-verification" content="zXl15uE7GBq5Uzt7PdFaD67iR_vOq7vqizLcVwYCmSM" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Introduction to Commerce | Commerce Buddy</title>
 
@@ -23,7 +22,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 header h1 {
@@ -34,40 +32,58 @@ nav a {
     color: white;
     margin-left: 25px;
     text-decoration: none;
-    font-weight: 500;
-}
-
-nav a:hover {
-    color: #ffd700;
 }
 
 /* MAIN CONTENT */
 main {
     max-width: 850px;
-    margin: 30px auto;
+    margin: 40px auto;
     padding: 40px 30px;
     background: white;
     border-radius: 10px;
 }
 
-/* TEXT */
-h1 {
+/* HEADINGS FIX */
+main h1 {
+    text-align: center;
     color: #0b3d91;
 }
 
-h2 {
-    margin-top: 30px;
+main h2 {
+    color: #0b3d91;
+    text-align: left;
 }
 
+.subheadline {
+    text-align: center;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* TEXT */
 p, li {
     line-height: 1.7;
     color: #555;
     text-align: justify;
 }
 
-/* SECTIONS */
+/* SECTION */
 section {
     margin-bottom: 25px;
+}
+
+/* FOOTER FIX */
+footer {
+    background: #0b3d91;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    color: white; /* FIX GREY ISSUE */
+    margin: 5px 0;
 }
 
 /* MOBILE */
@@ -125,26 +141,27 @@ section {
 
 <h1>Introduction to Commerce: Complete Beginner Guide for Class 11</h1>
 
-<h2>🌍 Commerce: The Bridge Between Business and Daily Life</h2>
+<p class="subheadline">
+Commerce is not just a subject—it is a practical life skill that helps us understand how business and money flow in the real world.
+</p>
 
 <section>
+<h2>🌍 Commerce: The Bridge Between Business and Daily Life</h2>
 <p>
-Commerce isn’t just a subject—it’s the backbone of how our world of trade, finance, and management operates. 
-At its core, commerce refers to all activities that enable the exchange of goods and services. 
-It builds a practical understanding of the economy and connects business with financial decision-making.
+Commerce isn’t just a subject—it’s the backbone of trade, finance, and management. It connects business operations with financial decision-making and builds real-world understanding.
 </p>
 </section>
 
 <section>
 <h2>📚 The Subjects That Shape Commerce</h2>
 <ul>
-<li><strong>Accounting</strong> – Recording transactions and determining financial results.</li>
-<li><strong>Business Studies</strong> – Understanding management and business operations.</li>
-<li><strong>Cost Accounting</strong> – Calculating and controlling production costs.</li>
-<li><strong>Taxation</strong> – Learning tax rules and calculations.</li>
-<li><strong>Commercial Law</strong> – Legal framework of business.</li>
-<li><strong>Auditing</strong> – Checking financial records.</li>
-<li><strong>Economics</strong> – Understanding resource use and markets.</li>
+<li><strong>Accounting</strong> – Recording transactions and financial results.</li>
+<li><strong>Business Studies</strong> – Understanding management and operations.</li>
+<li><strong>Cost Accounting</strong> – Controlling production costs.</li>
+<li><strong>Taxation</strong> – Understanding tax rules.</li>
+<li><strong>Commercial Law</strong> – Legal business framework.</li>
+<li><strong>Auditing</strong> – Verifying accounts.</li>
+<li><strong>Economics</strong> – Understanding markets and resources.</li>
 </ul>
 </section>
 
@@ -219,7 +236,7 @@ It builds a practical understanding of the economy and connects business with fi
 <section>
 <h2>✨ Conclusion</h2>
 <p>
-Commerce is not just a stream—it is a practical life skill that prepares you for real-world financial and business decisions.
+Commerce is not just a stream—it is a practical life skill that prepares you for real-world decisions.
 </p>
 
 <p><strong>Explore more:</strong> 
@@ -230,9 +247,9 @@ Commerce is not just a stream—it is a practical life skill that prepares you f
 
 </main>
 
-<footer style="background:#0b3d91; color:white; text-align:center; padding:20px; margin-top:40px;">
-    <p>© 2026 Commerce Buddy. All rights reserved.</p>
-    <p style="font-size:13px;">Building Real Skills. Shaping Confident Futures.</p>
+<footer>
+<p>© 2026 Commerce Buddy. All rights reserved.</p>
+<p style="font-size:13px;">Building Real Skills. Shaping Confident Futures.</p>
 </footer>
 
 </body>
