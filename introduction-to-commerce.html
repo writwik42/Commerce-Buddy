@@ -22,16 +22,24 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 header h1 {
     margin: 0;
 }
 
+header p {
+    margin: 0;
+    font-size: 12px;
+    color: white; /* FIXED */
+}
+
 nav a {
     color: white;
     margin-left: 25px;
     text-decoration: none;
+    font-weight: 500;
 }
 
 /* MAIN CONTENT */
@@ -45,19 +53,23 @@ main {
 
 /* HEADINGS FIX */
 main h1 {
-    text-align: center;
+    text-align: left; /* FIXED alignment */
     color: #0b3d91;
+    font-size: 28px;
+    margin-bottom: 10px;
 }
 
 main h2 {
     color: #0b3d91;
     text-align: left;
+    margin-top: 25px;
 }
 
 .subheadline {
-    text-align: center;
+    text-align: left; /* FIXED alignment */
     color: #555;
     margin-bottom: 20px;
+    font-size: 16px;
 }
 
 /* TEXT */
@@ -76,19 +88,17 @@ section {
 footer {
     background: #0b3d91;
     color: white;
-    text-align: center;
+    text-align: center; /* FIXED */
     padding: 20px;
     margin-top: 40px;
 }
 
 footer p {
-    color: white; /* FIX GREY ISSUE */
     margin: 5px 0;
 }
 
 /* MOBILE */
 @media (max-width: 768px) {
-
     header {
         flex-direction: column;
         align-items: flex-start;
@@ -109,8 +119,12 @@ footer p {
         margin: 10px;
     }
 
-    h1 {
-        font-size: 24px;
+    main h1 {
+        font-size: 22px;
+    }
+
+    main h2 {
+        font-size: 18px;
     }
 
     p, li {
@@ -123,19 +137,25 @@ footer p {
 <body>
 
 <header>
-<div>
+  <div>
     <h1>Commerce Buddy</h1>
-    <p style="margin:0; font-size:12px;">Building Real Skills</p>
-</div>
+    <p>Building Real Skills</p>
+  </div>
 
-<nav>
+  <nav>
     <a href="index.html">Home</a>
     <a href="class11.html">Class 11</a>
     <a href="class12.html">Class 12</a>
     <a href="keytopics.html">Key Topics</a>
     <a href="blog.html">Blog</a>
-</nav>
+  </nav>
 </header>
+
+<main>
+  <h1>Introduction to Commerce: Complete Beginner Guide for Class 11</h1>
+  <p class="subheadline">
+    Commerce is not just a subject—it is a practical life skill that helps us understand how business and money flow in the real world.
+  </p>
 
 <main>
 
@@ -248,9 +268,8 @@ Commerce is not just a stream—it is a practical life skill that prepares you f
 </main>
 
 <footer>
-<p>© 2026 Commerce Buddy. All rights reserved.</p>
-<p style="font-size:13px;">Building Real Skills. Shaping Confident Futures.</p>
+  <p>© 2026 Commerce Buddy. All rights reserved.</p>
+  <p style="font-size:13px;">Building Real Skills. Shaping Confident Futures.</p>
 </footer>
 
 </body>
-</html>
