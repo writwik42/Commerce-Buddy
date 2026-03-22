@@ -4,357 +4,209 @@
     <meta charset="UTF-8">
     <meta name="google-site-verification" content="zXl15uE7GBq5Uzt7PdFaD67iR_vOq7vqizLcVwYCmSM" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Commerce Buddy – Commerce Notes & MCQs</title>
     <meta name="description" content="Commerce Buddy – Simplifying commerce for Class 11 & 12 (WBCHSE, CBSE, ICSE). Study notes, exam MCQs, and expert guidance from a professional accountant.">
+
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-    <style>
-        /*--- Base Styles ---*/
-        body {
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-            background: #f5f7fa;
-            color: #333;
-            line-height: 1.6;
-        }
-        header {
-            background: #0b3d91;
-            color: white;
-            padding: 15px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        header h1 {
-            margin: 0;
-            font-weight: 700;
-        }
-        header p {
-            margin: 0;
-            font-size: 12px;
-            opacity: 0.85;
-        }
-        nav a {
-            color: white;
-            margin-left: 25px;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 14px;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
 
-        /*--- Hero Section ---*/
-        .hero {
-            text-align: center;
-            padding: 100px 20px;
-            background: linear-gradient(135deg, #0b3d91, #1e5bd8);
-            color: white;
-        }
-        .hero h2 {
-            font-size: 42px;
-            margin-bottom: 10px;
-        }
-        .hero p {
-            font-size: 18px;
-            color: #edf1f8;
-        }
-        .hero .btn {
-            display: inline-block;
-            background: #ffd700;
-            color: #0b3d91;
-            padding: 12px 25px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 500;
-            margin: 10px 10px 0 0;
-        }
-        .hero .btn-secondary {
-            background: #ffffff33;
-            color: #fff;
-        }
-
-        /*--- Section Titles ---*/
-        .section {
-            padding: 60px 20px;
-            text-align: center;
-        }
-        .section h2 {
-            color: #0b3d91;
-            margin-bottom: 30px;
-            font-size: 30px;
-        }
-
-        /*--- About Section ---*/
-        .about {
-            max-width: 800px;
-            margin: auto;
-            text-align: left;
-        }
-        .about p {
-            margin-bottom: 15px;
-        }
-        .about .highlight {
-            background: #eef3ff;
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 20px;
-            color: #0b3d91;
-        }
-        .about ul {
-            margin-top: 10px;
-            padding-left: 20px;
-        }
-        .about ul li {
-            margin-bottom: 5px;
-        }
-
-        /*--- Mission & Vision ---*/
-        .mission-vision {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        .mv-card {
-            background: white;
-            padding: 25px;
-            width: 320px;
-            border-radius: 12px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-            text-align: left;
-            margin: 10px;
-        }
-        .mv-card h3 {
-            margin-top: 0;
-            color: #0b3d91;
-        }
-        .mv-card p {
-            font-size: 14px;
-            color: #555;
-        }
-
-        /*--- Cards (Common) ---*/
-        .cards {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-        .card {
-            background: white;
-            padding: 20px;
-            width: 250px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            margin-bottom: 20px;
-        }
-        .card h3 {
-            margin-top: 0;
-            color: #0b3d91;
-            font-size: 18px;
-        }
-        .card p {
-            font-size: 14px;
-            color: #444;
-        }
-        .card .btn {
-            display: inline-block;
-            margin-top: 15px;
-            background: #0b3d91;
-            color: white;
-            padding: 8px 16px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-size: 14px;
-        }
-        .card .btn:hover {
-            background: #08306b;
-        }
-
-        /*--- Button Style ---*/
-        .btn {
-            font-weight: 500;
-        }
-
-        /*--- Footer ---*/
-        footer {
-            background: #0b3d91;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-            font-size: 14px;
-        }
-
-        /*--- Responsive ---*/
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            nav {
-                width: 100%;
-                margin-top: 10px;
-            }
-            nav a {
-                display: block;
-                margin: 8px 0;
-            }
-            .mv-card {
-                width: 100%;
-            }
-            .card {
-                width: 90%;
-            }
-        }
-    </style>
+    <!-- MASTER CSS -->
+    <link rel="stylesheet" href="Master2.css">
 </head>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const faders = document.querySelectorAll(".card, .section");
+
+  const appearOptions = {
+    threshold: 0.1, // trigger earlier
+    rootMargin: "0px 0px -20px 0px"
+  };
+
+  const appearOnScroll = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("fade-in");
+      observer.unobserve(entry.target);
+    });
+  }, appearOptions);
+
+  faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+  });
+});
+</script>
+
 <body>
 
-    <!-- Header -->
-    <header>
-        <div>
-            <h1>Commerce Buddy</h1>
-            <p>Building Real Skills</p>
-        </div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="class11.html">Class 11</a>
-            <a href="class12.html">Class 12</a>
-            <a href="keytopics.html">Key Topics</a>
-            <a href="blog.html">Blog</a>
-        </nav>
-    </header>
+<!-- HEADER -->
+<header>
+    <div>
+        <h1>Commerce Buddy</h1>
+        <p style="font-size:12px; opacity:0.8;">Building Real Skills</p>
+    </div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="class11.html">Class 11</a>
+        <a href="class12.html">Class 12</a>
+        <a href="keytopics.html">Key Topics</a>
+        <a href="blog.html">Blog</a>
+    </nav>
+</header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h2>Commerce Made Simple for Class 11 & 12</h2>
-        <p><strong>Building Real Skills. Shaping Confident Futures.</strong></p>
-        <p>Real-world examples. Tech-driven learning. Designed to make you stand out.</p>
-        <a href="class11.html" class="btn">Start Learning</a>
-        <a href="blog.html" class="btn btn-secondary">Explore Blog</a>
-    </section>
+<!-- HERO -->
+<section class="hero">
+    <h2>Commerce Made Simple for Class 11 & 12</h2>
+    <p><strong>Building Real Skills. Shaping Confident Futures.</strong></p>
+    <p>Real-world examples. Tech-driven learning. Designed to make you stand out.</p>
 
-    <!-- About Us Section -->
-    <section class="section">
-        <h2>About Commerce Buddy</h2>
-        <div class="about">
-            <p><strong>Commerce Buddy</strong> is a next-generation learning platform built to transform the way students understand commerce. Designed specifically for Class 11 and 12 students across WBCHSE, CBSE, and ICSE boards, our platform focuses on simplifying complex concepts and building a strong academic foundation.</p>
-            <p>Founded by a finance professional with over five years of experience in the Indian accounting and audit domain, along with exposure to global financial reporting frameworks such as US GAAP and IFRS, Commerce Buddy bridges the critical gap between theoretical knowledge and real-world application.</p>
-            <p>We believe that commerce is not just about scoring marks—it is about developing a practical understanding of how businesses operate, how financial decisions are made, and how the economy functions in real life. Our approach ensures that students not only perform well in exams but also build the confidence and skills required for future careers in finance, management, and entrepreneurship.</p>
-            <div class="highlight">
-                <strong>Our Focus:</strong>
-                <ul>
+    <a href="class11.html" class="btn btn-primary">Start Learning</a>
+    <a href="blog.html" class="btn btn-secondary">Explore Blog</a>
+</section>
+
+<!-- ABOUT -->
+<section class=".section">
+    <h2>About Commerce Buddy</h2>
+
+    <div class="about">
+        <p><strong>Commerce Buddy</strong> is a next-generation learning platform built to transform the way students understand commerce. Designed specifically for Class 11 and 12 students across WBCHSE, CBSE, and ICSE boards, our platform focuses on simplifying complex concepts and building a strong academic foundation.</p>
+
+        <p>Founded by a finance professional with over five years of experience in the Indian accounting and audit domain, along with exposure to global financial reporting frameworks such as US GAAP and IFRS, Commerce Buddy bridges the critical gap between theoretical knowledge and real-world application.</p>
+
+        <p>We believe that commerce is not just about scoring marks—it is about developing a practical understanding of how businesses operate, how financial decisions are made, and how the economy functions in real life. Our approach ensures that students not only perform well in exams but also build the confidence and skills required for future careers in finance, management, and entrepreneurship.</p>
+
+        <div class="highlight">
+            <strong>Our Focus:</strong>
+            <ul>
                 <li><strong>Concept Clarity:</strong> Simple, structured explanations designed for deep understanding</li>
                 <li><strong>Exam Readiness:</strong> Practice-oriented content including MCQs aligned with WBCHSE semester patterns</li>
                 <li><strong>Real-World Learning:</strong> Industry-based examples to connect theory with practical application</li>
                 <li><strong>Skill Development:</strong> Building analytical thinking, decision-making, and financial awareness</li>
                 <li><strong>Comprehensive Coverage:</strong> Key topics and concepts across Class 11 and 12 commerce syllabus</li>
-                </ul>
-            </div>
+            </ul>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Mission & Vision Section -->
-    <section class="section">
-        <h2>Our Mission & Vision</h2>
-        <div class="mission-vision">
-            <div class="mv-card">
-                <h3>🎯 Our Mission</h3>
-                <p>To make commerce education simple, practical, and accessible, while helping students build strong conceptual clarity and confidence.</p>
-            </div>
-            <div class="mv-card">
-                <h3>🌍 Our Vision</h3>
-                <p>To become a trusted commerce learning brand that goes beyond textbooks by developing real skills, job readiness, and guiding students toward smarter career choices.</p>
-            </div>
+<!-- MISSION & VISION -->
+<section class=".section">
+    <h2>Our Mission & Vision</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>🎯 Our Mission</h3>
+            <p>To make commerce education simple, practical, and accessible, while helping students build strong conceptual clarity and confidence.</p>
         </div>
-    </section>
 
-    <!-- Why Commerce Buddy Section -->
-    <section class="section">
-        <h2>Why Commerce Buddy?</h2>
-        <div class="cards">
-            <div class="card">
-                <h3>Introduction to Commerce</h3>
-                <p>A complete beginner's guide to understanding commerce and its real-world importance.</p>
-                <a href="introduction-to-commerce.html" class="btn">Read</a>
-            </div>
-            <div class="card">
-                <h3>📘 Real-Life Learning</h3>
-                <p>Concepts explained using real-world business examples and case studies.</p>
-            </div>
-            <div class="card">
-                <h3>⚡ Smart Study Methods</h3>
-                <p>Learn faster with practical strategies and structured notes.</p>
-            </div>
-            <div class="card">
-                <h3>🎯 Exam-Focused</h3>
-                <p>Content designed to help you score better with clarity and confidence.</p>
-            </div>
+        <div class="card">
+            <h3>🌍 Our Vision</h3>
+            <p>To become a trusted commerce learning brand that goes beyond textbooks by developing real skills, job readiness, and guiding students toward smarter career choices.</p>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Featured Articles Section -->
-    <section class="section">
-        <h2>Featured Articles</h2>
-        <div class="cards">
-            <div class="card">
-                <h3>How to Study Accountancy</h3>
-                <p>Step-by-step guide to master accountancy concepts efficiently.</p>
-                <a href="accountancy-study-guide.html" class="btn">Read</a>
-            </div>
-            <div class="card">
-                <h3>Is Commerce Hard?</h3>
-                <p>The truth about commerce and smart strategies to make it easier.</p>
-                <a href="commerce-hard-or-easy.html" class="btn">Read</a>
-            </div>
-            <div class="card">
-                <h3>Top Mistakes in Class 11</h3>
-                <p>Avoid common mistakes and stay ahead in your commerce studies.</p>
-                <a href="class11-commerce-mistakes.html" class="btn">Read</a>
-            </div>
+<!-- WHY -->
+<section class=".section">
+    <h2>Why Commerce Buddy?</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Introduction to Commerce</h3>
+            <p>A complete beginner's guide to understanding commerce and its real-world importance.</p>
+            <a href="introduction-to-commerce.html" class="btn btn-primary">Read</a>
         </div>
-    </section>
 
-    <!-- What You'll Learn Section -->
-    <section class="section">
-        <h2>What You’ll Learn</h2>
-        <div class="cards">
-            <div class="card">
-                <h3>📚 Class 11</h3>
-                <p>Clear, simple notes tailored for Class 11 commerce students.</p>
-                <a href="class11.html" class="btn">Explore</a>
-            </div>
-            <div class="card">
-                <h3>📘 Class 12</h3>
-                <p>Exam-focused notes and concepts for Class 12 commerce.</p>
-                <a href="class12.html" class="btn">Explore</a>
-            </div>
-            <div class="card">
-                <h3>🧠 Key Topics</h3>
-                <p>Understand important commerce concepts in an easy way.</p>
-                <a href="keytopics.html" class="btn">Explore</a>
-            </div>
-            <div class="card">
-                <h3>✍️ Blog</h3>
-                <p>Study tips, strategies, and commerce insights for students.</p>
-                <a href="blog.html" class="btn">Explore</a>
-            </div>
-            <div class="card">
-                <h3>📝 MCQ Practice</h3>
-                <p>Exam-ready multiple choice questions for WBCHSE semester exams.</p>
-                <a href="mcq-practice.html" class="btn">Explore</a>
-            </div>
+        <div class="card">
+            <h3>📘 Real-Life Learning</h3>
+            <p>Concepts explained using real-world business examples and case studies.</p>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2026 Commerce Buddy. All rights reserved.</p>
-        <p style="font-size:13px;">Building Real Skills. Shaping Confident Futures.</p>
-    </footer>
+        <div class="card">
+            <h3>⚡ Smart Study Methods</h3>
+            <p>Learn faster with practical strategies and structured notes.</p>
+        </div>
+
+        <div class="card">
+            <h3>🎯 Exam-Focused</h3>
+            <p>Content designed to help you score better with clarity and confidence.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- ARTICLES -->
+<section class=".section">
+    <h2>Featured Articles</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>How to Study Accountancy</h3>
+            <p>Step-by-step guide to master accountancy concepts efficiently.</p>
+            <a href="accountancy-study-guide.html" class="btn btn-primary">Read</a>
+        </div>
+
+        <div class="card">
+            <h3>Is Commerce Hard?</h3>
+            <p>The truth about commerce and smart strategies to make it easier.</p>
+            <a href="commerce-hard-or-easy.html" class="btn btn-primary">Read</a>
+        </div>
+
+        <div class="card">
+            <h3>Top Mistakes in Class 11</h3>
+            <p>Avoid common mistakes and stay ahead in your commerce studies.</p>
+            <a href="class11-commerce-mistakes.html" class="btn btn-primary">Read</a>
+        </div>
+
+    </div>
+</section>
+
+<!-- LEARNING -->
+<section class=".section">
+    <h2>What You’ll Learn</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>📚 Class 11</h3>
+            <p>Clear, simple notes tailored for Class 11 commerce students.</p>
+            <a href="class11.html" class="btn btn-primary">Explore</a>
+        </div>
+
+        <div class="card">
+            <h3>📘 Class 12</h3>
+            <p>Exam-focused notes and concepts for Class 12 commerce.</p>
+            <a href="class12.html" class="btn btn-primary">Explore</a>
+        </div>
+
+        <div class="card">
+            <h3>🧠 Key Topics</h3>
+            <p>Understand important commerce concepts in an easy way.</p>
+            <a href="keytopics.html" class="btn btn-primary">Explore</a>
+        </div>
+
+        <div class="card">
+            <h3>✍️ Blog</h3>
+            <p>Study tips, strategies, and commerce insights for students.</p>
+            <a href="blog.html" class="btn btn-primary">Explore</a>
+        </div>
+
+        <div class="card">
+            <h3>📝 MCQ Practice</h3>
+            <p>Exam-ready multiple choice questions for WBCHSE semester exams.</p>
+            <a href="mcq-practice.html" class="btn btn-primary">Explore</a>
+        </div>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Commerce Buddy. All rights reserved.</p>
+    <p style="font-size:13px; opacity:0.7;">Building Real Skills. Shaping Confident Futures.</p>
+</footer>
 
 </body>
 </html>
