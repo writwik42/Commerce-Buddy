@@ -98,10 +98,8 @@ nav a:hover {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 25px;
-  justify-items: center; /* keeps cards centered in their grid cell */
 }
 
-/* Individual card */
 .card {
   background: var(--card-bg);
   padding: 25px;
@@ -109,7 +107,7 @@ nav a:hover {
   transition: 0.3s;
   color: #E5E7EB;
   width: 100%;        /* let grid handle sizing */
-  max-width: 320px;   /* prevents cards from stretching too wide */
+  max-width: 320px;   /* prevents overly wide cards */
 }
 
 .card:hover {
