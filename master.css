@@ -129,6 +129,54 @@ footer {
   padding: 25px;
 }
 
+/* ===== ABOUT SECTION FIX ===== */
+
+.about {
+  max-width: 850px;
+  margin: auto;
+  text-align: left;
+}
+
+.about p {
+  margin-bottom: 18px;
+  line-height: 1.8;
+  color: #cbd5e1;
+}
+
+/* Fix highlight box */
+.highlight {
+  margin-top: 25px;
+  padding: 25px;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #1e293b, #0f172a);
+  border-left: 4px solid var(--primary);
+}
+
+/* Fix heading */
+.highlight strong {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: white;
+}
+
+/* Fix list alignment */
+.highlight ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.highlight ul li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+  color: #cbd5e1;
+}
+
+/* Improve bold text inside list */
+.highlight ul li strong {
+  color: white;
+}
+
 /* ===== RESPONSIVE DESIGN ===== */
 
 /* Tablets */
