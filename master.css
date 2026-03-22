@@ -177,6 +177,41 @@ footer {
   color: white;
 }
 
+/* ===== FORCE DARK BACKGROUND FIX ===== */
+
+/* Ensure full page stays dark */
+body {
+  background: #0F172A !important;
+  color: white;
+}
+
+/* Fix section backgrounds */
+.section {
+  background: transparent;
+}
+
+/* Optional alternating section (safe version) */
+.section:nth-child(even) {
+  background: #020617;
+}
+
+/* Fix About text visibility */
+.about,
+.about p {
+  color: #cbd5e1;
+}
+
+/* Fix highlight box */
+.highlight {
+  background: linear-gradient(145deg, #1e293b, #0f172a);
+  color: #cbd5e1;
+}
+
+/* Fix headings */
+h1, h2, h3 {
+  color: white;
+}
+
 /* ===== RESPONSIVE DESIGN ===== */
 
 /* Tablets */
