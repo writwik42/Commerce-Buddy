@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="google-site-verification" content="zXl15uE7GBq5Uzt7PdFaD67iR_vOq7vqizLcVwYCmSM" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Class 11 Notes - Commerce Buddy</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
@@ -11,6 +10,7 @@
 
 <body>
 
+<!-- Header -->
 <header>
   <h2>Commerce Buddy</h2>
   <nav>
@@ -27,11 +27,11 @@
   <p>Structured notes with real-life examples and concept clarity.</p>
 </div>
 
-<!-- Accountancy -->
-<div class=".section">
+<!-- Accountancy Section -->
+<div class="section fade-in">
   <h2>📘 Accountancy</h2>
-  <div class=".cards">
-    <div class=".card">
+  <div class="cards">
+    <div class="card fade-in">
       <h3>Introduction to Accounting</h3>
       <p>Understand basics with real-life examples.</p>
       <div class="btn-group">
@@ -40,7 +40,7 @@
       </div>
     </div>
 
-    <div class=".card">
+    <div class="card fade-in">
       <h3>Theory Base of Accounting</h3>
       <p>Concepts explained simply.</p>
       <div class="btn-group">
@@ -51,11 +51,11 @@
   </div>
 </div>
 
-<!-- Business Studies -->
-<div class=".section">
+<!-- Business Studies Section -->
+<div class="section fade-in">
   <h2>📊 Business Studies</h2>
   <div class="cards">
-    <div class=".card">
+    <div class="card fade-in">
       <h3>Nature & Purpose of Business</h3>
       <p>Learn with real-world examples.</p>
       <div class="btn-group">
@@ -66,26 +66,11 @@
   </div>
 </div>
 
- <!-- Costing & Taxation -->
-<div class=".section">
-  <h2>📊 Costing & Taxation </h2>
+  <!-- Commercial Law & Auditing -->
+<div class="section fade-in">
+  <h2>📊 Commercial Law & Preliminaries Auditing</h2>
   <div class="cards">
-    <div class=".card">
-      <h3>Controlling and managing costs in a business & Understanding tax rules.</h3>
-      <p>Learn with real-world examples.</p>
-      <div class="btn-group">
-        <a href="#" class="btn btn-primary">View</a>
-        <a href="#" class="btn btn-secondary">Download</a>
-      </div>
-    </div>
-  </div>
-</div>   
-
-   <!-- Commercial Law & Auditing  -->
-<div class=".section">
-  <h2>📊 Commercial Law & Preliminaries Auditing  </h2>
-  <div class="cards">
-    <div class=".card">
+    <div class="card fade-in">
       <h3>Legal business framework & verifying the accruacy of Financial reports.</h3>
       <p>Learn with real-world examples.</p>
       <div class="btn-group">
@@ -94,12 +79,28 @@
       </div>
     </div>
   </div>
-</div>  
-<!-- Economics -->
-<div class=".section">
+</div>
+
+  <!-- Costing & Taxation Section -->
+<div class="section fade-in">
+  <h2>📊 Costing & Taxation</h2>
+  <div class="cards">
+    <div class="card fade-in">
+      <h3>Controlling and managing costs in a business & Understanding tax rules.</h3>
+      <p>Learn with real-world examples.</p>
+      <div class="btn-group">
+        <a href="#" class="btn btn-primary">View</a>
+        <a href="#" class="btn btn-secondary">Download</a>
+      </div>
+    </div>
+  </div>
+</div>
+  
+<!-- Economics Section -->
+<div class="section fade-in">
   <h2>📈 Economics</h2>
   <div class="cards">
-    <div class=".card">
+    <div class="card fade-in">
       <h3>Introduction to Economics</h3>
       <p>Understand core concepts easily.</p>
       <div class="btn-group">
@@ -110,10 +111,29 @@
   </div>
 </div>
 
+<!-- Footer -->
 <footer>
   <p>© 2026 Commerce Buddy. All rights reserved.</p>
   <p style="font-size:13px;">Building Real Skills. Shaping Confident Futures.</p>
 </footer>
+<!-- Fade-in Animation Script -->
+<script>
+  const faders = document.querySelectorAll('.fade-in');
+  const appearOptions = { threshold: 0.2 };
+
+  const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.style.opacity = 1; // reveal
+      entry.target.style.animationPlayState = "running"; // trigger CSS animation
+      observer.unobserve(entry.target);
+    });
+  }, appearOptions);
+
+  faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+  });
+</script>
 
 </body>
 </html>
