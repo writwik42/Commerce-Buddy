@@ -93,13 +93,23 @@ nav a:hover {
 }
 
 /* Cards */
+/* Cards container */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  justify-items: center; /* keeps cards centered in their grid cell */
+}
+
+/* Individual card */
 .card {
   background: var(--card-bg);
   padding: 25px;
-  width: 260px;
   border-radius: 15px;
   transition: 0.3s;
   color: #E5E7EB;
+  width: 100%;        /* let grid handle sizing */
+  max-width: 320px;   /* prevents cards from stretching too wide */
 }
 
 .card:hover {
@@ -107,6 +117,7 @@ nav a:hover {
   box-shadow: 0 15px 40px rgba(0,0,0,0.5);
   border: 1px solid var(--accent);
 }
+
 
 /* Highlight Box */
 .highlight {
